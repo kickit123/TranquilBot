@@ -7,13 +7,15 @@ import java.util.List;
 public class Economy {
     private ObjectId id;
     private long server_id;
+    private List<EconomyUser> users;
+
+    public Economy() {
+    }
 
     public Economy(long server_id, List<EconomyUser> users) {
         this.server_id = server_id;
         this.users = users;
     }
-
-    private List<EconomyUser> users;
 
     public ObjectId getId() {
         return id;

@@ -40,6 +40,7 @@ public class JavacordProducer {
     private DiscordApi produceDiscordApi() {
         return new DiscordApiBuilder()
                 .setToken(discordToken)
+                .setAllIntents()
                 .login()
                 .whenComplete((discordApi, throwable) -> {
                     if (throwable != null) {
